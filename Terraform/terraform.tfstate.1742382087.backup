@@ -1,0 +1,598 @@
+{
+  "version": 4,
+  "terraform_version": "1.10.0",
+  "serial": 159,
+  "lineage": "c3ab8c01-34cc-eb57-cfbc-1d9a3d26bec0",
+  "outputs": {},
+  "resources": [
+    {
+      "mode": "managed",
+      "type": "aws_api_gateway_integration",
+      "name": "get_movies_integration",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "cache_key_parameters": null,
+            "cache_namespace": "i8zwf4",
+            "connection_id": "",
+            "connection_type": "INTERNET",
+            "content_handling": "",
+            "credentials": "",
+            "http_method": "GET",
+            "id": "agi-jlcw1jm9wl-i8zwf4-GET",
+            "integration_http_method": "",
+            "passthrough_behavior": "WHEN_NO_MATCH",
+            "request_parameters": null,
+            "request_templates": null,
+            "resource_id": "i8zwf4",
+            "rest_api_id": "jlcw1jm9wl",
+            "timeout_milliseconds": 29000,
+            "tls_config": [],
+            "type": "MOCK",
+            "uri": ""
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "aws_api_gateway_method.get_movies_method",
+            "aws_api_gateway_resource.movies_resource",
+            "aws_api_gateway_rest_api.movies_api"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_api_gateway_integration",
+      "name": "post_movies_integration",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "cache_key_parameters": null,
+            "cache_namespace": "i8zwf4",
+            "connection_id": "",
+            "connection_type": "INTERNET",
+            "content_handling": "",
+            "credentials": "",
+            "http_method": "POST",
+            "id": "agi-jlcw1jm9wl-i8zwf4-POST",
+            "integration_http_method": "",
+            "passthrough_behavior": "WHEN_NO_MATCH",
+            "request_parameters": null,
+            "request_templates": null,
+            "resource_id": "i8zwf4",
+            "rest_api_id": "jlcw1jm9wl",
+            "timeout_milliseconds": 29000,
+            "tls_config": [],
+            "type": "MOCK",
+            "uri": ""
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "aws_api_gateway_method.post_movies_method",
+            "aws_api_gateway_resource.movies_resource",
+            "aws_api_gateway_rest_api.movies_api"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_api_gateway_integration_response",
+      "name": "get_movies_integration_response",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "content_handling": "",
+            "http_method": "GET",
+            "id": "agir-jlcw1jm9wl-i8zwf4-GET-200",
+            "resource_id": "i8zwf4",
+            "response_parameters": {
+              "method.response.header.Content-Type": "'application/json'"
+            },
+            "response_templates": null,
+            "rest_api_id": "jlcw1jm9wl",
+            "selection_pattern": "",
+            "status_code": "200"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "aws_api_gateway_integration.get_movies_integration",
+            "aws_api_gateway_method.get_movies_method",
+            "aws_api_gateway_resource.movies_resource",
+            "aws_api_gateway_rest_api.movies_api"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_api_gateway_integration_response",
+      "name": "post_movies_integration_response",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "content_handling": "",
+            "http_method": "POST",
+            "id": "agir-jlcw1jm9wl-i8zwf4-POST-200",
+            "resource_id": "i8zwf4",
+            "response_parameters": {
+              "method.response.header.Content-Type": "'application/json'"
+            },
+            "response_templates": {},
+            "rest_api_id": "jlcw1jm9wl",
+            "selection_pattern": "",
+            "status_code": "200"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "aws_api_gateway_integration.post_movies_integration",
+            "aws_api_gateway_method.post_movies_method",
+            "aws_api_gateway_resource.movies_resource",
+            "aws_api_gateway_rest_api.movies_api"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_api_gateway_method",
+      "name": "get_movies_method",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "api_key_required": false,
+            "authorization": "NONE",
+            "authorization_scopes": null,
+            "authorizer_id": null,
+            "http_method": "GET",
+            "id": "agm-jlcw1jm9wl-i8zwf4-GET",
+            "operation_name": null,
+            "request_models": null,
+            "request_parameters": null,
+            "request_validator_id": null,
+            "resource_id": "i8zwf4",
+            "rest_api_id": "jlcw1jm9wl"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "aws_api_gateway_resource.movies_resource",
+            "aws_api_gateway_rest_api.movies_api"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_api_gateway_method",
+      "name": "options_movies_method",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "api_key_required": false,
+            "authorization": "NONE",
+            "authorization_scopes": null,
+            "authorizer_id": null,
+            "http_method": "OPTIONS",
+            "id": "agm-jlcw1jm9wl-i8zwf4-OPTIONS",
+            "operation_name": null,
+            "request_models": null,
+            "request_parameters": null,
+            "request_validator_id": null,
+            "resource_id": "i8zwf4",
+            "rest_api_id": "jlcw1jm9wl"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "aws_api_gateway_resource.movies_resource",
+            "aws_api_gateway_rest_api.movies_api"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_api_gateway_method",
+      "name": "post_movies_method",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "api_key_required": false,
+            "authorization": "NONE",
+            "authorization_scopes": null,
+            "authorizer_id": null,
+            "http_method": "POST",
+            "id": "agm-jlcw1jm9wl-i8zwf4-POST",
+            "operation_name": null,
+            "request_models": null,
+            "request_parameters": null,
+            "request_validator_id": null,
+            "resource_id": "i8zwf4",
+            "rest_api_id": "jlcw1jm9wl"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "aws_api_gateway_resource.movies_resource",
+            "aws_api_gateway_rest_api.movies_api"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_api_gateway_method_response",
+      "name": "get_movies_response",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "http_method": "GET",
+            "id": "agmr-jlcw1jm9wl-i8zwf4-GET-200",
+            "resource_id": "i8zwf4",
+            "response_models": null,
+            "response_parameters": {
+              "method.response.header.Content-Type": true
+            },
+            "rest_api_id": "jlcw1jm9wl",
+            "status_code": "200"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "aws_api_gateway_method.get_movies_method",
+            "aws_api_gateway_resource.movies_resource",
+            "aws_api_gateway_rest_api.movies_api"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_api_gateway_method_response",
+      "name": "options_movies_response",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "http_method": "OPTIONS",
+            "id": "agmr-jlcw1jm9wl-i8zwf4-OPTIONS-200",
+            "resource_id": "i8zwf4",
+            "response_models": {},
+            "response_parameters": {
+              "method.response.header.Access-Control-Allow-Credentials": true,
+              "method.response.header.Access-Control-Allow-Headers": true,
+              "method.response.header.Access-Control-Allow-Methods": true,
+              "method.response.header.Access-Control-Allow-Origin": true
+            },
+            "rest_api_id": "jlcw1jm9wl",
+            "status_code": "200"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "aws_api_gateway_method.options_movies_method",
+            "aws_api_gateway_resource.movies_resource",
+            "aws_api_gateway_rest_api.movies_api"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_api_gateway_method_response",
+      "name": "post_movies_response",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "http_method": "POST",
+            "id": "agmr-jlcw1jm9wl-i8zwf4-POST-200",
+            "resource_id": "i8zwf4",
+            "response_models": {},
+            "response_parameters": {
+              "method.response.header.Content-Type": true
+            },
+            "rest_api_id": "jlcw1jm9wl",
+            "status_code": "200"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "aws_api_gateway_method.post_movies_method",
+            "aws_api_gateway_resource.movies_resource",
+            "aws_api_gateway_rest_api.movies_api"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_api_gateway_resource",
+      "name": "movies_resource",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "i8zwf4",
+            "parent_id": "yz4hdp1y16",
+            "path": "/movies",
+            "path_part": "movies",
+            "rest_api_id": "jlcw1jm9wl"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "aws_api_gateway_rest_api.movies_api"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_api_gateway_rest_api",
+      "name": "movies_api",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "api_key_source": "HEADER",
+            "arn": "arn:aws:apigateway:eu-north-1::/restapis/jlcw1jm9wl",
+            "binary_media_types": [],
+            "body": null,
+            "created_date": "2025-03-14T08:50:49Z",
+            "description": "API for managing movies",
+            "disable_execute_api_endpoint": false,
+            "endpoint_configuration": [
+              {
+                "types": [
+                  "EDGE"
+                ],
+                "vpc_endpoint_ids": []
+              }
+            ],
+            "execution_arn": "arn:aws:execute-api:eu-north-1:588738567953:jlcw1jm9wl",
+            "fail_on_warnings": null,
+            "id": "jlcw1jm9wl",
+            "minimum_compression_size": "",
+            "name": "MoviesAPI",
+            "parameters": null,
+            "policy": "",
+            "put_rest_api_mode": null,
+            "root_resource_id": "yz4hdp1y16",
+            "tags": {},
+            "tags_all": {}
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_dynamodb_table",
+      "name": "movies",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "arn": "arn:aws:dynamodb:eu-north-1:588738567953:table/MoviesTable",
+            "attribute": [
+              {
+                "name": "movieId",
+                "type": "S"
+              }
+            ],
+            "billing_mode": "PAY_PER_REQUEST",
+            "deletion_protection_enabled": false,
+            "global_secondary_index": [],
+            "hash_key": "movieId",
+            "id": "MoviesTable",
+            "import_table": [],
+            "local_secondary_index": [],
+            "name": "MoviesTable",
+            "on_demand_throughput": [],
+            "point_in_time_recovery": [
+              {
+                "enabled": false
+              }
+            ],
+            "range_key": null,
+            "read_capacity": 0,
+            "replica": [],
+            "restore_date_time": null,
+            "restore_source_name": null,
+            "restore_source_table_arn": null,
+            "restore_to_latest_time": null,
+            "server_side_encryption": [],
+            "stream_arn": "",
+            "stream_enabled": false,
+            "stream_label": "",
+            "stream_view_type": "",
+            "table_class": "STANDARD",
+            "tags": {},
+            "tags_all": {},
+            "timeouts": null,
+            "ttl": [
+              {
+                "attribute_name": "",
+                "enabled": false
+              }
+            ],
+            "write_capacity": 0
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxODAwMDAwMDAwMDAwLCJkZWxldGUiOjYwMDAwMDAwMDAwMCwidXBkYXRlIjozNjAwMDAwMDAwMDAwfSwic2NoZW1hX3ZlcnNpb24iOiIxIn0="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_iam_role",
+      "name": "lambda_exec",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:iam::588738567953:role/lambda_exec_role",
+            "assume_role_policy": "{\"Statement\":[{\"Action\":\"sts:AssumeRole\",\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"lambda.amazonaws.com\"}}],\"Version\":\"2012-10-17\"}",
+            "create_date": "2025-03-14T08:50:49Z",
+            "description": "",
+            "force_detach_policies": false,
+            "id": "lambda_exec_role",
+            "inline_policy": [],
+            "managed_policy_arns": [
+              "arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess"
+            ],
+            "max_session_duration": 3600,
+            "name": "lambda_exec_role",
+            "name_prefix": "",
+            "path": "/",
+            "permissions_boundary": "",
+            "tags": {},
+            "tags_all": {},
+            "unique_id": "AROAYSE4NT4ISR2X3SX6X"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_iam_role_policy_attachment",
+      "name": "lambda_dynamodb_policy",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "lambda_exec_role-20250314085049909900000002",
+            "policy_arn": "arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess",
+            "role": "lambda_exec_role"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "aws_iam_role.lambda_exec"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_lambda_function",
+      "name": "movies_lambda",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "architectures": [
+              "x86_64"
+            ],
+            "arn": "arn:aws:lambda:eu-north-1:588738567953:function:MoviesFunction",
+            "code_sha256": "wXYMp+5lrDD2O0yM0+/twU2fqbwQ7uRKFvypHhyAWhQ=",
+            "code_signing_config_arn": "",
+            "dead_letter_config": [],
+            "description": "",
+            "environment": [
+              {
+                "variables": {
+                  "DYNAMODB_TABLE": "MoviesTable"
+                }
+              }
+            ],
+            "ephemeral_storage": [
+              {
+                "size": 512
+              }
+            ],
+            "file_system_config": [],
+            "filename": "lambda/lambda.zip",
+            "function_name": "MoviesFunction",
+            "handler": "lambda_function.lambda_handler",
+            "id": "MoviesFunction",
+            "image_config": [],
+            "image_uri": "",
+            "invoke_arn": "arn:aws:apigateway:eu-north-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-north-1:588738567953:function:MoviesFunction/invocations",
+            "kms_key_arn": "",
+            "last_modified": "2025-03-19T09:26:05.220+0000",
+            "layers": [],
+            "logging_config": [
+              {
+                "application_log_level": "",
+                "log_format": "Text",
+                "log_group": "/aws/lambda/MoviesFunction",
+                "system_log_level": ""
+              }
+            ],
+            "memory_size": 128,
+            "package_type": "Zip",
+            "publish": false,
+            "qualified_arn": "arn:aws:lambda:eu-north-1:588738567953:function:MoviesFunction:$LATEST",
+            "qualified_invoke_arn": "arn:aws:apigateway:eu-north-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-north-1:588738567953:function:MoviesFunction:$LATEST/invocations",
+            "replace_security_groups_on_destroy": null,
+            "replacement_security_group_ids": null,
+            "reserved_concurrent_executions": -1,
+            "role": "arn:aws:iam::588738567953:role/lambda_exec_role",
+            "runtime": "python3.10",
+            "s3_bucket": null,
+            "s3_key": null,
+            "s3_object_version": null,
+            "signing_job_arn": "",
+            "signing_profile_version_arn": "",
+            "skip_destroy": false,
+            "snap_start": [],
+            "source_code_hash": "",
+            "source_code_size": 1228,
+            "tags": {},
+            "tags_all": {},
+            "timeout": 3,
+            "timeouts": null,
+            "tracing_config": [
+              {
+                "mode": "PassThrough"
+              }
+            ],
+            "version": "$LATEST",
+            "vpc_config": []
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6NjAwMDAwMDAwMDAwLCJ1cGRhdGUiOjYwMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "aws_dynamodb_table.movies",
+            "aws_iam_role.lambda_exec"
+          ]
+        }
+      ]
+    }
+  ],
+  "check_results": null
+}

@@ -1,0 +1,1 @@
+{"errorMessage": "Syntax error in module 'lambda_function': unindent does not match any outer indentation level (lambda_function.py, line 58)", "errorType": "Runtime.UserCodeSyntaxError", "requestId": "", "stackTrace": ["  File \"/var/task/lambda_function.py\" Line 58\n           elif http_method == \"PUT\":\n"]}
