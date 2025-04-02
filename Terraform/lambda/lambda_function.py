@@ -11,16 +11,14 @@ table = dynamodb.Table('MoviesTable')
 def lambda_handler(event, context):
     try:
         http_method = event.get("httpMethod", "")
-
-        # CORS preflight
+        
         if http_method == "OPTIONS":
             return generate_response(200, {"message": "CORS preflight success"})
-
-        # Extract token and decode it to get the username
+        
         auth_header = event.get('headers', {}).get('Authorization', '')
         if auth_header:
-            token = auth_header.split(' ')[1]  # Extract the token from Authorization header
-            decoded_token = jwt.decode(token, options={"verify_signature": False})  # Decode token without verifying the signature (use proper secret in production)
+            token = auth_header.split(' ')[1]  
+            decoded_token = jwt.decode(token, options={"verify_signature": False})  
             username = decoded_token.get('preferred_username', decoded_token.get('name', 'Unknown User'))  # Extract username
 
         if http_method == "POST":
